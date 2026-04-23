@@ -39,7 +39,7 @@ python DiffieHellman.py
 1. Enter **Private Key A** and **Private Key B**.
 2. Either:
    - Keep manual `g` and `p` (spin boxes), or
-   - Enable the large-prime mode checkbox (to the right of the `g`/`p` controls, labeled **`2 < (2048-bit)`** in the current UI).  
+   - Enable the large-prime mode checkbox (to the right of the `g`/`p` controls, with the exact literal UI text **`2 < (2048-bit)`**).  
      This option means “use default strong parameters”: built-in 2048-bit prime (`p`) and generator `g = 2`.
 3. Click **Generate** to compute:
    - Shared symmetric key
@@ -55,6 +55,7 @@ python DiffieHellman.py
 - Stores key parameters (`g`, `p`) and private secret
 - Generates public key with modular exponentiation
 - Generates shared key from the other party’s public key
+- Includes `check_other_public_key` (name in source), which currently performs only a basic `gcd(p, g) == 1` check
 - Returns both raw shared key and its SHA-256 hash
 
 ### `AvalancheEffect` class
