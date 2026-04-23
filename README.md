@@ -39,7 +39,7 @@ python DiffieHellman.py
 1. Enter **Private Key A** and **Private Key B**.
 2. Either:
    - Keep manual `g` and `p` (spin boxes), or
-   - Enable the checkbox labeled **`2 < (2048-bit)`** (2048-bit prime mode) to use the built-in large prime (`p`) with generator `g = 2`.
+   - Enable the large-prime mode checkbox (shown in the current GUI with label **`2 < (2048-bit)`**) to use the built-in 2048-bit prime (`p`) and generator `g = 2`.
 3. Click **Generate** to compute:
    - Shared symmetric key
    - SHA-256 hash
@@ -70,7 +70,7 @@ python DiffieHellman.py
 
 - This repository is an educational/demo implementation, not a production cryptographic library.
 - The GUI expects valid integer key inputs.
-- `check_other_public_key` currently checks `gcd(p, g) == 1` and does not fully validate peer public key safety conditions.  
+- Despite its name, `check_other_public_key` currently only checks `gcd(p, g) == 1` and does not validate the peer public key value itself.  
   This incomplete validation can enable weak or malicious public-key inputs, so this implementation is **not suitable for security-sensitive or production cryptographic use**.
 - The application references `favicon.ico`; if missing on your platform, window icon loading may fail.
 
