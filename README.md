@@ -70,7 +70,7 @@ python DiffieHellman.py
 
 - This repository is an educational/demo implementation, not a production cryptographic library.
 - The GUI expects valid integer key inputs.
-- Despite its name, `check_other_public_key` currently only checks `gcd(p, g) == 1` and does not validate the peer public key value itself.  
+- Despite its name, `check_other_public_key` currently only checks `gcd(p, g) == 1` and does not validate the peer public key value itself.
   This incomplete validation can enable weak or malicious public-key inputs, so this implementation is **not suitable for security-sensitive or production cryptographic use**.
 - The application references `favicon.ico`; if missing on your platform, window icon loading may fail.
 
