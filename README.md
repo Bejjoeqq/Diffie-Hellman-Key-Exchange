@@ -23,7 +23,7 @@ DiffieHellman.py   # Main GUI app and Diffie-Hellman implementation
 
 ## Requirements
 
-- Python 3.x
+- Python 3.8+
 - Tkinter (usually bundled with standard Python installations)
 
 ## How to Run
@@ -39,7 +39,7 @@ python DiffieHellman.py
 1. Enter **Private Key A** and **Private Key B**.
 2. Either:
    - Keep manual `g` and `p` (spin boxes), or
-   - Enable the checkbox labeled **`2 < (2048-bit)`** to use built-in large-prime mode.
+   - Enable the checkbox labeled **`2 < (2048-bit)`** (2048-bit prime mode) to use the built-in large prime (`p`) with generator `g = 2`.
 3. Click **Generate** to compute:
    - Shared symmetric key
    - SHA-256 hash
